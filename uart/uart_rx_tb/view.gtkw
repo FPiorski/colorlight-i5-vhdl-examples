@@ -1,0 +1,96 @@
+[*]
+[*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
+[*] Fri May  3 18:20:43 2024
+[*]
+[dumpfile] "/home/turbo/git-repos/colorlight-i5-vhdl-examples/uart/uart_rx_tb/wave.ghw"
+[dumpfile_mtime] "Fri May  3 18:20:05 2024"
+[dumpfile_size] 88080
+[savefile] "/home/turbo/git-repos/colorlight-i5-vhdl-examples/uart/uart_rx_tb/view.gtkw"
+[timestart] 0
+[size] 2556 1401
+[pos] -2561 -474
+*-25.600002 20000000 91266000000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+[markername] AA
+[markername] BB
+[markername] CC
+[markername] DD
+[markername] EE
+[markername] FF
+[markername] GG
+[markername] HH
+[markername] II
+[markername] JJ
+[markername] KK
+[markername] LL
+[markername] MM
+[markername] NN
+[markername] OO
+[markername] PP
+[markername] QQ
+[markername] RR
+[markername] SS
+[markername] TT
+[markername] UU
+[markername] VV
+[markername] WW
+[markername] XX
+[markername] YY
+[markername] ZZ
+[treeopen] top.
+[treeopen] top.tb_top.
+[treeopen] top.tb_top.uut.
+[sst_width] 276
+[signals_width] 428
+[sst_expanded] 1
+[sst_vpaned_height] 761
+@28
+top.tb_top.clk
+@22
+#{top.tb_top.data_in[7:0]} top.tb_top.data_in[7] top.tb_top.data_in[6] top.tb_top.data_in[5] top.tb_top.data_in[4] top.tb_top.data_in[3] top.tb_top.data_in[2] top.tb_top.data_in[1] top.tb_top.data_in[0]
+@28
+top.tb_top.data_out
+top.tb_top.idle_out
+@22
+#{top.tb_top.received_out[7:0]} top.tb_top.received_out[7] top.tb_top.received_out[6] top.tb_top.received_out[5] top.tb_top.received_out[4] top.tb_top.received_out[3] top.tb_top.received_out[2] top.tb_top.received_out[1] top.tb_top.received_out[0]
+@29
+top.tb_top.received_valid_out
+@28
+top.tb_top.uart_tx_inst.i_clk
+@22
+#{top.tb_top.uart_tx_inst.i_data[7:0]} top.tb_top.uart_tx_inst.i_data[7] top.tb_top.uart_tx_inst.i_data[6] top.tb_top.uart_tx_inst.i_data[5] top.tb_top.uart_tx_inst.i_data[4] top.tb_top.uart_tx_inst.i_data[3] top.tb_top.uart_tx_inst.i_data[2] top.tb_top.uart_tx_inst.i_data[1] top.tb_top.uart_tx_inst.i_data[0]
+@28
+top.tb_top.uart_tx_inst.i_data_valid
+top.tb_top.uart_tx_inst.o_idle
+top.tb_top.uart_tx_inst.o_uart_tx
+@420
+top.tb_top.uart_tx_inst.r_bit_cnt
+top.tb_top.uart_tx_inst.r_clk_cnt
+@22
+#{top.tb_top.uart_tx_inst.r_data_in[7:0]} top.tb_top.uart_tx_inst.r_data_in[7] top.tb_top.uart_tx_inst.r_data_in[6] top.tb_top.uart_tx_inst.r_data_in[5] top.tb_top.uart_tx_inst.r_data_in[4] top.tb_top.uart_tx_inst.r_data_in[3] top.tb_top.uart_tx_inst.r_data_in[2] top.tb_top.uart_tx_inst.r_data_in[1] top.tb_top.uart_tx_inst.r_data_in[0]
+@28
+top.tb_top.uart_tx_inst.r_data_out
+@420
+top.tb_top.uart_tx_inst.r_state_cur
+top.tb_top.uart_tx_inst.w_state_next
+@28
+top.tb_top.uut.i_clk
+top.tb_top.uut.i_uart_rx
+@22
+#{top.tb_top.uut.o_data[7:0]} top.tb_top.uut.o_data[7] top.tb_top.uut.o_data[6] top.tb_top.uut.o_data[5] top.tb_top.uut.o_data[4] top.tb_top.uut.o_data[3] top.tb_top.uut.o_data[2] top.tb_top.uut.o_data[1] top.tb_top.uut.o_data[0]
+@28
+top.tb_top.uut.o_data_valid
+@420
+top.tb_top.uut.r_bit_cnt
+top.tb_top.uut.r_clk_cnt
+@22
+#{top.tb_top.uut.r_data[7:0]} top.tb_top.uut.r_data[7] top.tb_top.uut.r_data[6] top.tb_top.uut.r_data[5] top.tb_top.uut.r_data[4] top.tb_top.uut.r_data[3] top.tb_top.uut.r_data[2] top.tb_top.uut.r_data[1] top.tb_top.uut.r_data[0]
+@28
+top.tb_top.uut.r_data_valid
+@420
+top.tb_top.uut.r_state_cur
+top.tb_top.uut.r_streak_cnt
+top.tb_top.uut.w_state_next
+@28
+top.tb_top.valid_in
+[pattern_trace] 1
+[pattern_trace] 0
