@@ -13,14 +13,14 @@ GHDL_GENERICS = -gg_sys_clk_hz=$(CLK_FREQ)
 
 all: $(PROJ).bit
 
-%.json: uart.vhd %.vhd
-	yosys -m ghdl -p 'ghdl $(GHDL_GENERICS) $^ $(ADDITIONAL_SOURCES) -e uart; synth_ecp5 -json $@'
+%.json: uart.vhd %.vhd $(ADDITIONAL_SOURCES)
+	yosys -m ghdl -p 'ghdl $(GHDL_GENERICS) $^ -e uart; synth_ecp5 -json $@'
 
-$(PROJ)_out.config: $(PROJ).json $(LPF) $(ADDITIONAL_SOURCES)
+$(PROJ)_out.config: $(PROJ).json $(LPF)
 	nextpnr-ecp5 $(NEXTPNR_FLAGS) --package $(PACKAGE) --speed 6 --json $< --textcfg $@ --lpf $(LPF)
 
 $(PROJ).bit: $(PROJ)_out.config
-	ecppack --svf ${PROJ}.svf $< $@
+	ecppack --compress --svf ${PROJ}.svf $< $@
 
 ${PROJ}.svf : ${PROJ}.bit
 

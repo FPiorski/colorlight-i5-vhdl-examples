@@ -11,14 +11,14 @@ GHDL_GENERICS = -gg_sys_clk_hz=$(CLK_FREQ)
 
 all: $(PROJ).bit
 
-%.json: led.vhd %.vhd $(LPF)
+%.json: led.vhd %.vhd
 	yosys -m ghdl -p 'ghdl $(GHDL_GENERICS) $^ -e led; synth_ecp5 -json $@'
 
-$(PROJ)_out.config: $(PROJ).json
+$(PROJ)_out.config: $(PROJ).json $(LPF)
 	nextpnr-ecp5 $(NEXTPNR_FLAGS) --package $(PACKAGE) --speed 6 --json $< --textcfg $@ --lpf $(LPF)
 
 $(PROJ).bit: $(PROJ)_out.config
-	ecppack --svf ${PROJ}.svf $< $@
+	ecppack --compress --svf ${PROJ}.svf $< $@
 
 ${PROJ}.svf : ${PROJ}.bit
 
