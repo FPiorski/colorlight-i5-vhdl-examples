@@ -24,5 +24,6 @@ The video output is single data rate for now, which means I struggled to hit the
 The sub-examples are as follows:
 - `blank` - just a blank 640x480 60(-ish)Hz screen
 - `test_pattern` - a very simple animated XOR pattern
+- `text0` - some initial work on a text buffer, grid of 8 by 8 cells, open the serial port and use the arrow keys to move around and other keys to "write". Arrow key escape sequence detection is pretty much brute forced, I guess a small state machine to properly decode escape sequences would be nice for text1. I'm committing this because a) it's fun and b) I might not have any free time to work on this for a while
 
 Big thanks to [splinedrive/my_hdmi_device](https://github.com/splinedrive/my_hdmi_device) and everyone who had anything to do with all the resources linked there, including [this fpga4fun post](https://www.fpga4fun.com/HDMI.html).

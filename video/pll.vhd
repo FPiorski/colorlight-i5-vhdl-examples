@@ -92,7 +92,7 @@ BEGIN
     (
         CLKI_DIV        => 1,
         CLKFB_DIV       => 10,
-        CLKOP_DIV       => 2,
+        CLKOP_DIV       => 2, --this keeps the VCO frequency in the allowed 400-800 MHz range
         CLKOS_DIV       => 20,
         CLKOP_ENABLE    => "ENABLED",
         CLKOS_ENABLE    => "ENABLED",

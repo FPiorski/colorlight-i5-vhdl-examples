@@ -1,7 +1,9 @@
 #PROJ = blank
-PROJ = test_pattern
+#PROJ = test_pattern
+PROJ = text0
+#PROJ = text1
 
-ADDITIONAL_SOURCES = ../uart/uart_rx.vhd ../uart/uart_tx.vhd pll.vhd video_encoder.vhd tmds_encoder.vhd pseudo_diff_outb.vhd
+ADDITIONAL_SOURCES = ../uart/uart_rx.vhd ../uart/uart_tx.vhd pll.vhd video_encoder.vhd tmds_encoder.vhd pseudo_diff_outb.vhd bram.vhd
 
 LPF = ../common/io.lpf
 PACKAGE = CABGA381
