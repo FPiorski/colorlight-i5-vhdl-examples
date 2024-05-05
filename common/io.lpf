@@ -1,11 +1,31 @@
-LOCATE    COMP "i_clk"     SITE  "P3";
-IOBUF     PORT "i_clk"     IO_TYPE=LVCMOS33 PULLMODE=NONE;
-FREQUENCY PORT "i_clk"     25 MHZ;
+BLOCK RESETPATHS;
+BLOCK ASYNCPATHS;
 
-LOCATE    COMP "o_led"     SITE  "U16";
-IOBUF     PORT "o_led"     IO_TYPE=LVCMOS25 PULLMODE=NONE SLEWRATE=SLOW;
+LOCATE    COMP "i_clk"        SITE  "P3";
+IOBUF     PORT "i_clk"        IO_TYPE=LVCMOS33  PULLMODE=NONE;
+FREQUENCY PORT "i_clk"        25 MHZ;
 
-LOCATE    COMP "i_uart_rx" SITE  "H18";
-IOBUF     PORT "i_uart_rx" IO_TYPE=LVCMOS33 PULLMODE=NONE;
-LOCATE    COMP "o_uart_tx" SITE  "J17";
-IOBUF     PORT "o_uart_tx" IO_TYPE=LVCMOS33 PULLMODE=NONE SLEWRATE=SLOW DRIVE=4;
+LOCATE    COMP "o_led"        SITE  "U16";
+IOBUF     PORT "o_led"        IO_TYPE=LVCMOS25  PULLMODE=NONE SLEWRATE=SLOW;
+
+LOCATE    COMP "i_uart_rx"    SITE  "H18";
+IOBUF     PORT "i_uart_rx"    IO_TYPE=LVCMOS33  PULLMODE=NONE;
+LOCATE    COMP "o_uart_tx"    SITE  "J17";
+IOBUF     PORT "o_uart_tx"    IO_TYPE=LVCMOS33  PULLMODE=NONE SLEWRATE=SLOW DRIVE=4;
+
+LOCATE    COMP "o_video_b_dp" SITE  "G19";
+IOBUFE    PORT "o_video_b_dp" IO_TYPE=LVCMOS33D               SLEWRATE=FAST DRIVE=16;
+LOCATE    COMP "o_video_b_dn" SITE  "H20";
+IOBUFE    PORT "o_video_b_dn" IO_TYPE=LVCMOS33D               SLEWRATE=FAST DRIVE=16;
+LOCATE    COMP "o_video_g_dp" SITE  "E20";
+IOBUFE    PORT "o_video_g_dp" IO_TYPE=LVCMOS33D               SLEWRATE=FAST DRIVE=16;
+LOCATE    COMP "o_video_g_dn" SITE  "F19";
+IOBUFE    PORT "o_video_g_dn" IO_TYPE=LVCMOS33D               SLEWRATE=FAST DRIVE=16;
+LOCATE    COMP "o_video_r_dp" SITE  "C20";
+IOBUFE    PORT "o_video_r_dp" IO_TYPE=LVCMOS33D               SLEWRATE=FAST DRIVE=16;
+LOCATE    COMP "o_video_r_dn" SITE  "D19";
+IOBUFE    PORT "o_video_r_dn" IO_TYPE=LVCMOS33D               SLEWRATE=FAST DRIVE=16;
+LOCATE    COMP "o_video_c_dp" SITE  "J19";
+IOBUFE    PORT "o_video_c_dp" IO_TYPE=LVCMOS33D               SLEWRATE=FAST DRIVE=16;
+LOCATE    COMP "o_video_c_dn" SITE  "K19";
+IOBUFE    PORT "o_video_c_dn" IO_TYPE=LVCMOS33D               SLEWRATE=FAST DRIVE=16;
