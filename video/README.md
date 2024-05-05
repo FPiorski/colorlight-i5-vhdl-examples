@@ -2,7 +2,7 @@
 
 ![xor](xor.gif)
 
-This example uses the "HDMI" connector on the expansion board. While the connector itself does fit standard HDMI cables, the HDMI standard has some pretty stringent requirements which are pretty much impossible to meet using this board (and some not-so-stringent ones, such as DC coupling on the physical layer, which the expansion board does not do). Above all, expensive HDMI compliance testing (and a licensing fee) is required if you want to say your device has HDMI. With all that in mind, the digital video interface on this board is certainly *not* HDMI, so use it at your own risk. That being said, encoding video data with TMDS and routing it to the connector will probably yield an image on a connected monitor, so this is what the examples here do. If you're reading this, it means I've successfully done just that on my setup, but again, as with all code in this repo, build and upload it at your own risk.
+This example uses the "HDMI" connector on the expansion board. While the connector itself does fit standard HDMI cables, the HDMI standard has some pretty stringent requirements which are pretty much impossible to meet using this board (and some not-so-stringent ones, such as DC coupling on the physical layer, which the expansion board does not do). Above all, expensive HDMI compliance testing (and a licensing fee) is required if you want the privilege of stating your device has HDMI. With all that in mind, the digital video interface on this board is certainly *not* HDMI, so use it at your own risk. That being said, encoding video data with TMDS and routing it to the connector will probably yield an image on a connected monitor, so this is what the examples here do. If you're reading this, it means I've successfully done just that on my setup, but again, as with all code in this repo, build and upload it at your own risk.
 
 With that out of the way, you know the drill by now - choose which sub-example you want by uncommenting the appropriate line in `Makefile`, then
 ```
@@ -17,7 +17,7 @@ or
 make prog-blaster
 ```
 
-The video output is single data rate for now, which means I struggled to hit the 250 MHz max frequency for w_tmds_clk for a while, unitl I optimized `video_encoder.vhd`. Since I was already playing around with timing, I wrote `timing.sh` to compare code performance - it runs nextpnr a bunch of times and plots a histogram of max w_tmds_clk frequency, here's one based on 1000 runs (took just a bit over 20 minutes):
+The video output is single data rate for now, which means I struggled to hit the 250 MHz max frequency for w_tmds_clk for a while, unitl I optimized `video_encoder.vhd`. Since I was already playing around with timing, I wrote `timing.sh` to compare code performance - it runs nextpnr a bunch of times and plots a histogram of max w_tmds_clk frequency, here's one based on 1000 runs (took just a bit over 20 minutes to generate it):
 
 ![Timing histogram example](timing_example.png)
 

@@ -13,7 +13,7 @@ GHDL_GENERICS = -gg_sys_clk_hz=$(CLK_FREQ)
 
 all: $(PROJ).bit
 
-%.json: video.vhd %.vhd $(ADDITIONAL_SOURCES)
+%.json: video.vhd pattern_generator.vhd %.vhd $(ADDITIONAL_SOURCES)
 	yosys -m ghdl -p 'ghdl $(GHDL_GENERICS) $^ -e video; synth_ecp5 -json $@'
 
 $(PROJ)_out.config: $(PROJ).json $(LPF)
