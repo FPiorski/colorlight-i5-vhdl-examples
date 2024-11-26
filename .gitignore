@@ -2,3 +2,5 @@
 **/*.json
 **/*.svf
 **/*out.config
+#ghdl library files
+**/*.cf

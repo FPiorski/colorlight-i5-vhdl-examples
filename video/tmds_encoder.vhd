@@ -78,13 +78,17 @@ BEGIN
                 -- and our r_output_data is (9 downto 0), hence the mirroring
                 CASE (i_control) IS
                     WHEN "00" =>
+                        --r_output_data <= "0010101011";
                         r_output_data <= "1101010100";
                     WHEN "01" =>
-                        r_output_data <= "1101010100";
+                        --r_output_data <= "1101010100";
+                        r_output_data <= "0010101011";
                     WHEN "10" =>
-                        r_output_data <= "1101010100";
+                        --r_output_data <= "0010101010";
+                        r_output_data <= "0101010100";
                     WHEN "11" =>
-                        r_output_data <= "1101010100";
+                        --r_output_data <= "1101010101";
+                        r_output_data <= "1010101011";
                     WHEN OTHERS =>
                         NULL;
                 END CASE;

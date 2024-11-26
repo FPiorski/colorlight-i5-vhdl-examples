@@ -3,10 +3,13 @@
 PROJ = text0
 #PROJ = text1
 
-ADDITIONAL_SOURCES = ../uart/uart_rx.vhd ../uart/uart_tx.vhd pll.vhd video_encoder.vhd tmds_encoder.vhd pseudo_diff_outb.vhd bram.vhd
+ADDITIONAL_SOURCES = ../uart/uart_rx.vhd ../uart/uart_tx.vhd \
+				     pll.vhd video_encoder.vhd tmds_encoder.vhd pseudo_diff_outb.vhd \
+				     bram.vhd character_ram.vhd
 
 LPF = ../common/io.lpf
 PACKAGE = CABGA381
+SPEED = 6
 NEXTPNR_FLAGS = --25k --freq 100
 
 CLK_FREQ = 25_000_000
@@ -19,7 +22,8 @@ all: $(PROJ).bit
 	yosys -m ghdl -p 'ghdl $(GHDL_GENERICS) $^ -e video; synth_ecp5 -json $@'
 
 $(PROJ)_out.config: $(PROJ).json $(LPF)
-	nextpnr-ecp5 $(NEXTPNR_FLAGS) --package $(PACKAGE) --placer-heap-cell-placement-timeout 4 --speed 6 --randomize-seed --json $< --textcfg $@ --lpf $(LPF)
+	nextpnr-ecp5 $(NEXTPNR_FLAGS) --package $(PACKAGE) --placer-heap-cell-placement-timeout 4 \
+	--speed $(SPEED) --randomize-seed --json $< --textcfg $@ --lpf $(LPF)
 
 $(PROJ).bit: $(PROJ)_out.config
 	ecppack --compress --svf ${PROJ}.svf $< $@
@@ -31,6 +35,9 @@ prog: ${PROJ}.bit
 
 prog-blaster: ${PROJ}.bit
 	openFPGALoader -c usb-blaster $(PROJ).bit
+
+prog-ft232: ${PROJ}.bit
+	openFPGALoader -c ft232 $(PROJ).bit
 
 just_pnr : $(PROJ)_out.config
 

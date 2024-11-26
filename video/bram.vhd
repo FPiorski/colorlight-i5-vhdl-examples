@@ -6,7 +6,8 @@ ENTITY bram IS
     GENERIC
     (
         g_width          : positive :=  8;
-        g_depth_log2     : positive := 10
+        g_depth_log2     : positive := 10;
+        g_reset_val      : integer  :=  0
     );
     PORT
     (
@@ -27,7 +28,7 @@ ARCHITECTURE RTL OF bram IS
     CONSTANT C_depth    : integer := 2**g_depth_log2;
 
     TYPE     T_bram_arr IS ARRAY (0 TO C_depth-1) OF std_logic_vector(g_width-1 downto 0);
-    SIGNAL   r_bram_arr : T_bram_arr;
+    SIGNAL   r_bram_arr : T_bram_arr := (OTHERS => std_logic_vector(to_unsigned(g_reset_val, g_width)));
 
     SIGNAL   r_out_buff : std_logic_vector(g_width-1 downto 0) := (OTHERS => '0');
 
