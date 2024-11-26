@@ -9,17 +9,10 @@ This example uses the "HDMI" connector on the expansion board. While the connect
 With that out of the way, you know the drill by now - choose which sub-example you want by uncommenting the appropriate line in `Makefile`, then
 ```
 make
-```
-
-```
 make prog
 ```
-or
-```
-make prog-blaster
-```
 
-The video output is single data rate for now, which means I struggled to hit the 250 MHz max frequency for w_tmds_clk for a while, unitl I optimized `video_encoder.vhd`. Since I was already playing around with timing, I wrote `timing.sh` to compare code performance - it runs nextpnr a bunch of times and plots a histogram of max w_tmds_clk frequency, here's one based on 1000 runs (took just a bit over 20 minutes to generate it):
+The video output is single data rate for now, which means I struggled to hit the 250 MHz max frequency for w_tmds_clk for a while, unitl I optimized `video_encoder.vhd`. Since I was already playing around with timing, I wrote `timing.sh` to compare code performance - it runs nextpnr a bunch of times and plots a histogram of max w_tmds_clk frequency, here's one based on 1000 runs (took just a bit over 20 minutes):
 
 ![Timing histogram example](timing_example.png)
 

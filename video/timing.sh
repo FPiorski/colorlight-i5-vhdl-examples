@@ -21,7 +21,7 @@ then
     for i in $(seq 1 1 $1)
     do
         rm *_out.config
-        r=$(make just_pnr 2>&1 | grep "Max frequency for clock" | tail -n1)
+        r=$(make just_pnr 2>&1 | grep "Max frequency for clock" | grep "w_tmds_clk" | tail -n1)
         echo "Run $i: $r"
         m=$(echo $r | grep -Eo '[+-]?[0-9]+([.][0-9]+)?' | head -n1)
         echo "$m" >> $fn

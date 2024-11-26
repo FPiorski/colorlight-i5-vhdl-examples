@@ -1,12 +1,12 @@
-BLOCK RESETPATHS;
-BLOCK ASYNCPATHS;
+# Colorlight i5 Ext Board you can get along with the module itself
+# https://github.com/wuxx/Colorlight-FPGA-Projects
 
 LOCATE    COMP "i_clk"        SITE  "P3";
 IOBUF     PORT "i_clk"        IO_TYPE=LVCMOS33  PULLMODE=NONE;
 FREQUENCY PORT "i_clk"        25 MHZ;
 
 LOCATE    COMP "o_led"        SITE  "U16";
-IOBUF     PORT "o_led"        IO_TYPE=LVCMOS25  PULLMODE=NONE SLEWRATE=SLOW;
+IOBUF     PORT "o_led"        IO_TYPE=LVCMOS25                SLEWRATE=SLOW;
 
 LOCATE    COMP "i_uart_rx"    SITE  "H18";
 IOBUF     PORT "i_uart_rx"    IO_TYPE=LVCMOS33  PULLMODE=NONE;
