@@ -5,7 +5,8 @@ USE IEEE.NUMERIC_STD.ALL;
 ENTITY uart IS
     GENERIC
     (
-        g_sys_clk_hz : integer
+        g_sys_clk_hz : integer;
+        g_uart_baud  : integer := 9600
     );
     PORT
     (

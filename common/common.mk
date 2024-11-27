@@ -4,7 +4,7 @@ NEXTPNR_FLAGS = --25k --freq 100
 
 CLK_FREQ = 25_000_000
 
-GHDL_GENERICS = -gg_sys_clk_hz=$(CLK_FREQ)
+GHDL_GENERICS += -gg_sys_clk_hz=$(CLK_FREQ)
 
 all: $(PROJ).bit
 

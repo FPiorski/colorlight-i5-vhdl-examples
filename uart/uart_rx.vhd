@@ -24,9 +24,6 @@ ARCHITECTURE RTL OF uart_rx IS
     SIGNAL   r_state_cur          : T_state                               := IDLE;
     SIGNAL   w_state_next         : T_state;
 
-    CONSTANT C_streak_cnt_mod     : integer                               := 20;
-    SIGNAL   r_streak_cnt         : integer RANGE 0 TO C_streak_cnt_mod-1 :=  0;
-
     CONSTANT C_clk_cnt_mod        : integer                               := g_sys_clk_hz / g_uart_baud;
     SIGNAL   r_clk_cnt            : integer RANGE 0 TO C_clk_cnt_mod-1    :=  0;
 
@@ -49,7 +46,7 @@ BEGIN
         END IF;
     END PROCESS;
 
-    P_decide_next_state : PROCESS(r_state_cur, i_uart_rx, r_clk_cnt, r_bit_cnt, r_streak_cnt)
+    P_decide_next_state : PROCESS(r_state_cur, i_uart_rx, r_clk_cnt, r_bit_cnt)
     BEGIN
 
         w_state_next <= r_state_cur;
@@ -82,7 +79,7 @@ BEGIN
                 END IF;
 
             WHEN ERROR =>
-                IF (r_streak_cnt >= C_streak_cnt_mod-1) THEN
+                IF (i_uart_rx = '1') THEN
                     w_state_next <= IDLE;
                 END IF;
 
@@ -121,23 +118,6 @@ BEGIN
                 END IF;
             ELSE
                 r_clk_cnt <= 0;
-            END IF;
-        END IF;
-    END PROCESS;
-
-    P_streak_cnt : PROCESS(i_clk)
-    BEGIN
-        IF (rising_edge(i_clk)) THEN
-            IF (r_state_cur = ERROR) THEN
-                IF (i_uart_rx = '1') THEN
-                    IF (r_streak_cnt < C_streak_cnt_mod-1) THEN
-                        r_streak_cnt <= r_streak_cnt + 1;
-                    END IF;
-                ELSE
-                    r_streak_cnt <= 0;
-                END IF;
-            ELSE
-                r_streak_cnt <= 0;
             END IF;
         END IF;
     END PROCESS;

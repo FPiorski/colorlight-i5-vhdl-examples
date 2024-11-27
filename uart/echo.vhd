@@ -1,6 +1,6 @@
 ARCHITECTURE echo OF uart IS
 
-    CONSTANT C_uart_baud      : integer   := 9600;
+    CONSTANT C_uart_baud      : integer   := g_uart_baud;
 
     SIGNAL   w_received       : std_logic_vector(7 downto 0);
     SIGNAL   w_received_valid : std_logic;

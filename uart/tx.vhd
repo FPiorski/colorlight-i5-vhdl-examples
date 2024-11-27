@@ -1,6 +1,6 @@
 ARCHITECTURE tx OF uart IS
 
-    CONSTANT C_uart_baud    : integer   := 9600;
+    CONSTANT C_uart_baud    : integer   := g_uart_baud;
     CONSTANT C_char_ms      : integer   :=  10;
 
     CONSTANT C_char_cnt_mod : integer   := g_sys_clk_hz / 1000 * C_char_ms;
