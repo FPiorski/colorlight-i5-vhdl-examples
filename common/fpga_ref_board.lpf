@@ -1,0 +1,54 @@
+LOCATE    COMP "i_clk"             SITE  "P3";
+IOBUF     PORT "i_clk"             IO_TYPE=LVCMOS33  PULLMODE=NONE;
+FREQUENCY PORT "i_clk"             25 MHZ;
+
+LOCATE    COMP "o_led"             SITE  "U16";
+IOBUF     PORT "o_led"             IO_TYPE=LVCMOS25                SLEWRATE=SLOW;
+
+LOCATE    COMP "i_uart_rx"         SITE  "L5";
+IOBUF     PORT "i_uart_rx"         IO_TYPE=LVCMOS33  PULLMODE=NONE;
+LOCATE    COMP "o_uart_tx"         SITE  "L4";
+IOBUF     PORT "o_uart_tx"         IO_TYPE=LVCMOS33                SLEWRATE=SLOW DRIVE=4;
+
+LOCATE    COMP "io_eth_mdio"       SITE  "P5";
+IOBUF     PORT "io_eth_mdio"       IO_TYPE=LVCMOS33  PULLMODE=UP   SLEWRATE=FAST DRIVE=4;
+LOCATE    COMP "o_eth_mdc"         SITE  "N5";
+IOBUF     PORT "o_eth_mdc"         IO_TYPE=LVCMOS33                SLEWRATE=FAST DRIVE=4;
+
+LOCATE    COMP "o_eth1_ledr"       SITE  "R1";
+IOBUF     PORT "o_eth1_ledr"       IO_TYPE=LVCMOS33                SLEWRATE=SLOW;
+LOCATE    COMP "o_eth1_ledl"       SITE  "T1";
+IOBUF     PORT "o_eth1_ledl"       IO_TYPE=LVCMOS33                SLEWRATE=SLOW;
+
+FREQUENCY PORT "o_eth1_tx_clk"     125 MHZ;
+LOCATE    COMP "o_eth1_tx_clk"     SITE  "U19";
+IOBUF     PORT "o_eth1_tx_clk"     IO_TYPE=LVCMOS33                SLEWRATE=FAST DRIVE=4;
+LOCATE    COMP "o_eth1_tx_ctl"     SITE  "P19";
+IOBUF     PORT "o_eth1_tx_ctl"     IO_TYPE=LVCMOS33                SLEWRATE=FAST DRIVE=4;
+LOCATE    COMP "o_eth1_tx_data[3]" SITE  "U20";
+IOBUF     PORT "o_eth1_tx_data[3]" IO_TYPE=LVCMOS33                SLEWRATE=FAST DRIVE=4;
+LOCATE    COMP "o_eth1_tx_data[2]" SITE  "T19";
+IOBUF     PORT "o_eth1_tx_data[2]" IO_TYPE=LVCMOS33                SLEWRATE=FAST DRIVE=4;
+LOCATE    COMP "o_eth1_tx_data[1]" SITE  "T20";
+IOBUF     PORT "o_eth1_tx_data[1]" IO_TYPE=LVCMOS33                SLEWRATE=FAST DRIVE=4;
+LOCATE    COMP "o_eth1_tx_data[0]" SITE  "R20";
+IOBUF     PORT "o_eth1_tx_data[0]" IO_TYPE=LVCMOS33                SLEWRATE=FAST DRIVE=4;
+
+FREQUENCY PORT "i_eth1_rx_clk"     125 MHZ;
+LOCATE    COMP "i_eth1_rx_clk"     SITE  "L19";
+IOBUF     PORT "i_eth1_rx_clk"     IO_TYPE=LVCMOS33                SLEWRATE=FAST DRIVE=4;
+LOCATE    COMP "i_eth1_rx_ctl"     SITE  "M20";
+IOBUF     PORT "i_eth1_rx_ctl"     IO_TYPE=LVCMOS33                SLEWRATE=FAST DRIVE=4;
+LOCATE    COMP "i_eth1_rx_data[3]" SITE  "P20";
+IOBUF     PORT "i_eth1_rx_data[3]" IO_TYPE=LVCMOS33                SLEWRATE=FAST DRIVE=4;
+LOCATE    COMP "i_eth1_rx_data[2]" SITE  "N19";
+IOBUF     PORT "i_eth1_rx_data[2]" IO_TYPE=LVCMOS33                SLEWRATE=FAST DRIVE=4;
+LOCATE    COMP "i_eth1_rx_data[1]" SITE  "N20";
+IOBUF     PORT "i_eth1_rx_data[1]" IO_TYPE=LVCMOS33                SLEWRATE=FAST DRIVE=4;
+LOCATE    COMP "i_eth1_rx_data[0]" SITE  "M19";
+IOBUF     PORT "i_eth1_rx_data[0]" IO_TYPE=LVCMOS33                SLEWRATE=FAST DRIVE=4;
+
+LOCATE    COMP "o_eth2_ledr"       SITE  "U1";
+IOBUF     PORT "o_eth2_ledr"       IO_TYPE=LVCMOS33                SLEWRATE=SLOW;
+LOCATE    COMP "o_eth2_ledl"       SITE  "Y2";
+IOBUF     PORT "o_eth2_ledl"       IO_TYPE=LVCMOS33                SLEWRATE=SLOW;

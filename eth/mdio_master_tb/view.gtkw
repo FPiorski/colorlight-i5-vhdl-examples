@@ -1,0 +1,71 @@
+[*]
+[*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
+[*] Wed Aug 13 13:58:57 2025
+[*]
+[dumpfile] "/home/turbo/git-repos/github/colorlight-i5-vhdl-examples/eth/mdio_master_tb/wave.ghw"
+[dumpfile_mtime] "Wed Aug 13 13:52:16 2025"
+[dumpfile_size] 61583
+[savefile] "/home/turbo/git-repos/github/colorlight-i5-vhdl-examples/eth/mdio_master_tb/view.gtkw"
+[timestart] 0
+[size] 2556 1401
+[pos] 1364 -948
+*-33.900002 132250000000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+[sst_width] 276
+[signals_width] 301
+[sst_expanded] 1
+[sst_vpaned_height] 430
+@28
+top.tb_top.clk
+top.tb_top.idle_out
+top.tb_top.mdc
+@29
+top.tb_top.mdio
+@22
+#{top.tb_top.phy_addr[4:0]} top.tb_top.phy_addr[4] top.tb_top.phy_addr[3] top.tb_top.phy_addr[2] top.tb_top.phy_addr[1] top.tb_top.phy_addr[0]
+#{top.tb_top.rd_data[15:0]} top.tb_top.rd_data[15] top.tb_top.rd_data[14] top.tb_top.rd_data[13] top.tb_top.rd_data[12] top.tb_top.rd_data[11] top.tb_top.rd_data[10] top.tb_top.rd_data[9] top.tb_top.rd_data[8] top.tb_top.rd_data[7] top.tb_top.rd_data[6] top.tb_top.rd_data[5] top.tb_top.rd_data[4] top.tb_top.rd_data[3] top.tb_top.rd_data[2] top.tb_top.rd_data[1] top.tb_top.rd_data[0]
+@28
+top.tb_top.rd_not_wr
+@22
+#{top.tb_top.reg_addr[4:0]} top.tb_top.reg_addr[4] top.tb_top.reg_addr[3] top.tb_top.reg_addr[2] top.tb_top.reg_addr[1] top.tb_top.reg_addr[0]
+@28
+top.tb_top.uut.i_clk
+top.tb_top.uut.i_data_valid
+@22
+#{top.tb_top.uut.i_phy_addr[4:0]} top.tb_top.uut.i_phy_addr[4] top.tb_top.uut.i_phy_addr[3] top.tb_top.uut.i_phy_addr[2] top.tb_top.uut.i_phy_addr[1] top.tb_top.uut.i_phy_addr[0]
+@28
+top.tb_top.uut.i_rd_not_wr
+@22
+#{top.tb_top.uut.i_reg_addr[4:0]} top.tb_top.uut.i_reg_addr[4] top.tb_top.uut.i_reg_addr[3] top.tb_top.uut.i_reg_addr[2] top.tb_top.uut.i_reg_addr[1] top.tb_top.uut.i_reg_addr[0]
+#{top.tb_top.uut.i_wr_data[15:0]} top.tb_top.uut.i_wr_data[15] top.tb_top.uut.i_wr_data[14] top.tb_top.uut.i_wr_data[13] top.tb_top.uut.i_wr_data[12] top.tb_top.uut.i_wr_data[11] top.tb_top.uut.i_wr_data[10] top.tb_top.uut.i_wr_data[9] top.tb_top.uut.i_wr_data[8] top.tb_top.uut.i_wr_data[7] top.tb_top.uut.i_wr_data[6] top.tb_top.uut.i_wr_data[5] top.tb_top.uut.i_wr_data[4] top.tb_top.uut.i_wr_data[3] top.tb_top.uut.i_wr_data[2] top.tb_top.uut.i_wr_data[1] top.tb_top.uut.i_wr_data[0]
+@28
+top.tb_top.uut.io_mdio
+top.tb_top.uut.o_idle
+top.tb_top.uut.o_mdc
+@22
+#{top.tb_top.uut.o_rd_data[15:0]} top.tb_top.uut.o_rd_data[15] top.tb_top.uut.o_rd_data[14] top.tb_top.uut.o_rd_data[13] top.tb_top.uut.o_rd_data[12] top.tb_top.uut.o_rd_data[11] top.tb_top.uut.o_rd_data[10] top.tb_top.uut.o_rd_data[9] top.tb_top.uut.o_rd_data[8] top.tb_top.uut.o_rd_data[7] top.tb_top.uut.o_rd_data[6] top.tb_top.uut.o_rd_data[5] top.tb_top.uut.o_rd_data[4] top.tb_top.uut.o_rd_data[3] top.tb_top.uut.o_rd_data[2] top.tb_top.uut.o_rd_data[1] top.tb_top.uut.o_rd_data[0]
+@28
+top.tb_top.uut.o_rd_data_valid
+@420
+top.tb_top.uut.r_bit_cnt
+top.tb_top.uut.r_clk_cnt
+@22
+#{top.tb_top.uut.r_data_in[63:0]} top.tb_top.uut.r_data_in[63] top.tb_top.uut.r_data_in[62] top.tb_top.uut.r_data_in[61] top.tb_top.uut.r_data_in[60] top.tb_top.uut.r_data_in[59] top.tb_top.uut.r_data_in[58] top.tb_top.uut.r_data_in[57] top.tb_top.uut.r_data_in[56] top.tb_top.uut.r_data_in[55] top.tb_top.uut.r_data_in[54] top.tb_top.uut.r_data_in[53] top.tb_top.uut.r_data_in[52] top.tb_top.uut.r_data_in[51] top.tb_top.uut.r_data_in[50] top.tb_top.uut.r_data_in[49] top.tb_top.uut.r_data_in[48] top.tb_top.uut.r_data_in[47] top.tb_top.uut.r_data_in[46] top.tb_top.uut.r_data_in[45] top.tb_top.uut.r_data_in[44] top.tb_top.uut.r_data_in[43] top.tb_top.uut.r_data_in[42] top.tb_top.uut.r_data_in[41] top.tb_top.uut.r_data_in[40] top.tb_top.uut.r_data_in[39] top.tb_top.uut.r_data_in[38] top.tb_top.uut.r_data_in[37] top.tb_top.uut.r_data_in[36] top.tb_top.uut.r_data_in[35] top.tb_top.uut.r_data_in[34] top.tb_top.uut.r_data_in[33] top.tb_top.uut.r_data_in[32] top.tb_top.uut.r_data_in[31] top.tb_top.uut.r_data_in[30] top.tb_top.uut.r_data_in[29] top.tb_top.uut.r_data_in[28] top.tb_top.uut.r_data_in[27] top.tb_top.uut.r_data_in[26] top.tb_top.uut.r_data_in[25] top.tb_top.uut.r_data_in[24] top.tb_top.uut.r_data_in[23] top.tb_top.uut.r_data_in[22] top.tb_top.uut.r_data_in[21] top.tb_top.uut.r_data_in[20] top.tb_top.uut.r_data_in[19] top.tb_top.uut.r_data_in[18] top.tb_top.uut.r_data_in[17] top.tb_top.uut.r_data_in[16] top.tb_top.uut.r_data_in[15] top.tb_top.uut.r_data_in[14] top.tb_top.uut.r_data_in[13] top.tb_top.uut.r_data_in[12] top.tb_top.uut.r_data_in[11] top.tb_top.uut.r_data_in[10] top.tb_top.uut.r_data_in[9] top.tb_top.uut.r_data_in[8] top.tb_top.uut.r_data_in[7] top.tb_top.uut.r_data_in[6] top.tb_top.uut.r_data_in[5] top.tb_top.uut.r_data_in[4] top.tb_top.uut.r_data_in[3] top.tb_top.uut.r_data_in[2] top.tb_top.uut.r_data_in[1] top.tb_top.uut.r_data_in[0]
+@28
+top.tb_top.uut.r_data_out
+top.tb_top.uut.r_mdc
+top.tb_top.uut.r_out_en
+@22
+#{top.tb_top.uut.r_rd_data[15:0]} top.tb_top.uut.r_rd_data[15] top.tb_top.uut.r_rd_data[14] top.tb_top.uut.r_rd_data[13] top.tb_top.uut.r_rd_data[12] top.tb_top.uut.r_rd_data[11] top.tb_top.uut.r_rd_data[10] top.tb_top.uut.r_rd_data[9] top.tb_top.uut.r_rd_data[8] top.tb_top.uut.r_rd_data[7] top.tb_top.uut.r_rd_data[6] top.tb_top.uut.r_rd_data[5] top.tb_top.uut.r_rd_data[4] top.tb_top.uut.r_rd_data[3] top.tb_top.uut.r_rd_data[2] top.tb_top.uut.r_rd_data[1] top.tb_top.uut.r_rd_data[0]
+@28
+top.tb_top.uut.r_rd_data_valid
+top.tb_top.uut.r_read_not_write
+@420
+top.tb_top.uut.r_state_cur
+top.tb_top.uut.w_state_next
+@28
+top.tb_top.valid_in
+top.tb_top.valid_out
+@22
+#{top.tb_top.wr_data[15:0]} top.tb_top.wr_data[15] top.tb_top.wr_data[14] top.tb_top.wr_data[13] top.tb_top.wr_data[12] top.tb_top.wr_data[11] top.tb_top.wr_data[10] top.tb_top.wr_data[9] top.tb_top.wr_data[8] top.tb_top.wr_data[7] top.tb_top.wr_data[6] top.tb_top.wr_data[5] top.tb_top.wr_data[4] top.tb_top.wr_data[3] top.tb_top.wr_data[2] top.tb_top.wr_data[1] top.tb_top.wr_data[0]
+[pattern_trace] 1
+[pattern_trace] 0

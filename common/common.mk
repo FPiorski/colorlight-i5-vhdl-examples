@@ -1,6 +1,6 @@
 LPF = ../common/$(BOARD).lpf
 PACKAGE = CABGA381
-NEXTPNR_FLAGS = --25k --freq 100
+NEXTPNR_FLAGS = --25k
 
 CLK_FREQ = 25_000_000
 
